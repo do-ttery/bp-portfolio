@@ -17,3 +17,6 @@ public
 **/resources/_gen/
 **/.hugo_build.lock
 /.github-pages-setup-backups/
+
+# macOS Finder가 폴더마다 만드는 파일 (site/ 재포함 규칙보다 뒤에 둬야 함)
+**/.DS_Store
