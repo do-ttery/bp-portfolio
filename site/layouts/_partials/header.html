@@ -1,0 +1,45 @@
+{{/* 테마 header.html 재정의.
+     모바일(768px 이하) 메뉴 버튼 label이 아이콘(aria-hidden)만 있어 버튼과 체크박스(#menu-toggle) 모두 이름이 없었음.
+     → label 안에 화면에는 안 보이는 글자(.sr-only, 테마 CSS에 있음)를 넣어, label과 for로 연결된 체크박스에도 같은 이름이 붙게 함 */}}
+<nav class="navigation">
+  <section class="container">
+    {{ with .Site }}
+    <a class="navigation-title" href="{{ absLangURL "" }}">
+      {{ .Title }}
+    </a>
+    {{ end }}
+    {{ if or .Site.Menus.main hugo.IsMultilingual }}
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+        <span class="sr-only">메뉴 열기/닫기</span>
+      </label>
+      <ul class="navigation-list">
+        {{ with .Site.Menus.main}}
+          {{ range sort . }}
+            <li class="navigation-item">
+              <a class="navigation-link {{ .Params.class }}" href="{{ index (apply (slice .URL) (.Params.urlFunc | default "relLangURL") ".") 0 }}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        {{ end }}
+        {{ if hugo.IsMultilingual }}
+          {{ $node := . }}
+          {{ .Scratch.Set "separator" true }}
+          {{ range (default .Site.Home.AllTranslations .Translations) }}
+            {{ if ne $.Site.Language .Language }}
+              {{ if $node.Scratch.Get "separator" }}
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                {{ $node.Scratch.Set "separator" false }}
+              {{ end }}
+              <li class="navigation-item">
+                <a href="{{ .RelPermalink }}">{{ .Language.LanguageName | emojify }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </ul>
+    {{ end }}
+  </section>
+</nav>
