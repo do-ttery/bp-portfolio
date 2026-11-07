@@ -72,8 +72,3 @@ url = "about/"
 name = "활동"
 weight = 3
 url = "projects/"
-
-[[languages.ko.menu.main]]
-name = "Contact me"
-weight = 5
-url = "contact/"
