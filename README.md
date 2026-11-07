@@ -1,53 +1,14 @@
-<p align="center">
-  <p align="center">
-    <a href="https://themes.gohugo.io/hugo-coder/">
-      <img src="https://img.shields.io/badge/theme-hugo--coder-2b8cbe" alt="Hugo Theme Badge"">
-    </a>
-    <a href="https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.txt">
-      <img src="https://img.shields.io/github/license/luizdepra/hugo-coder.svg" alt="MIT License Badge">
-    </a>
-  </p>
+# bp-portfolio — 문도경 개인 소개 사이트
 
-  <p align="center">
-    <a href="https://github.com/luizdepra/hugo-coder">
-      <img src="images/logos/logotype-a.png" alt="Hugo Coder Logo" width="600px" height="184px">
-    </a>
-  </p>
-</p>
+전북대학교 컴퓨터공학부 문도경의 개인 소개 웹사이트입니다.
+Hugo 테마 [hugo-coder](https://github.com/luizdepra/hugo-coder)로 만들고, GitHub Actions로 GitHub Pages에 자동 배포합니다.
 
-A simple and clean blog theme for [Hugo](https://gohugo.io/).
+| 항목 | 주소 |
+|---|---|
+| 공개 사이트 | https://do-ttery.github.io/bp-portfolio/ |
+| 저장소 | https://github.com/do-ttery/bp-portfolio |
+| 배포 기록 (Actions) | https://github.com/do-ttery/bp-portfolio/actions |
 
-![](images/screenshot.png)
+사이트 구성: 홈(이름·소개) · [소개](https://do-ttery.github.io/bp-portfolio/about/)(관심 분야·사용 기술·경력) · [활동](https://do-ttery.github.io/bp-portfolio/projects/)(대표 활동 빨래집사)
 
-## Live Demo
-
-See [here](https://hugo-coder.netlify.app/).
-
-## Quick Start
-
-1. Add the repository into your Hugo Project repository as a submodule, `git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder`.
-2. Configure your `hugo.toml`. You can either use [this minimal configuration](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md#complete-example) as a base, or look for a complete explanation about all configurations [here](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md). The [`hugo.toml`](https://github.com/luizdepra/hugo-coder/blob/master/exampleSite/hugo.toml) inside the [`exampleSite`](https://github.com/luizdepra/hugo-coder/tree/master/exampleSite) is also a good reference.
-3. Build your site with `hugo server` and see the result at `http://localhost:1313/`.
-
-## Documentation
-
-See the [`docs`](docs/home.md) folder.
-
-## License
-
-Coder is licensed under the [MIT license](https://github.com/luizdepra/hugo-coder/blob/master/LICENSE.md).
-
-## Maintenance
-
-This theme is maintained by its author [Luiz de Prá](https://github.com/luizdepra) with the help from these awesome [contributors](CONTRIBUTORS.md).
-
-## Sponsoring
-
-If you like my project or it was useful for you, consider supporting its development. Just:
-
-<a href="https://www.buymeacoffee.com/luizdepra" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
-## Special Thanks
-
--   Gleen McComb, for his great [article](https://glennmccomb.com/articles/how-to-build-custom-hugo-pagination/) about custom pagination.
--   All contributors, for every PR and Issue reported.
+> 테마 원본 README는 `site/themes/template/README.md`에 그대로 남아 있습니다.
