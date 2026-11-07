@@ -1,6 +1,7 @@
 {{/* 테마 header.html 재정의.
      모바일(768px 이하) 메뉴 버튼 label이 아이콘(aria-hidden)만 있어 버튼과 체크박스(#menu-toggle) 모두 이름이 없었음.
-     → label 안에 화면에는 안 보이는 글자(.sr-only, 테마 CSS에 있음)를 넣어, label과 for로 연결된 체크박스에도 같은 이름이 붙게 함 */}}
+     → label 안에 화면에는 안 보이는 글자(.sr-only, 테마 CSS에 있음)를 넣어, label과 for로 연결된 체크박스에도 같은 이름이 붙게 함
+     체크박스는 Space로만 켜지는 게 기본이라, 버튼처럼 보이는 ☰에서 Enter로도 메뉴가 열리도록 onkeydown 추가 */}}
 <nav class="navigation">
   <section class="container">
     {{ with .Site }}
@@ -9,7 +10,8 @@
     </a>
     {{ end }}
     {{ if or .Site.Menus.main hugo.IsMultilingual }}
-      <input type="checkbox" id="menu-toggle" />
+      <input type="checkbox" id="menu-toggle"
+             onkeydown="if (event.key === 'Enter') { event.preventDefault(); this.click(); }" />
       <label class="menu-button float-right" for="menu-toggle">
         <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
         <span class="sr-only">메뉴 열기/닫기</span>
