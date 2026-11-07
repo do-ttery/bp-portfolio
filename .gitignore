@@ -20,3 +20,6 @@ public
 
 # macOS Finder가 폴더마다 만드는 파일 (site/ 재포함 규칙보다 뒤에 둬야 함)
 **/.DS_Store
+
+# site/ 안에서 hugo·hugo server를 실행하면 생기는 빌드 결과 (위의 !/site/** 때문에 따로 제외)
+/site/public/
