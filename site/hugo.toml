@@ -24,7 +24,8 @@ author = "문도경"
 description = "전북대학교 컴퓨터공학부 문도경의 개인 소개 사이트"
 keywords = "문도경,전북대학교,컴퓨터공학,백엔드,포트폴리오"
 info = ["전북대학교 컴퓨터공학부", "작품경진대회 대상 · 네이버 커넥트재단 AI Agent Challenge 우수 사례"]
-avatarURL = "images/avatar.jpg"
+# 아바타 없이 이름·소개 텍스트만 표시 (데모 실루엣 이미지 제거). 사진을 쓰면 site/static/images/에 넣고 경로 지정
+# avatarURL = "images/본인사진.jpg"
 dateFormat = "2006년 1월 2일"
 since = 2026
 # Git Commit in Footer, uncomment the line below to enable it
