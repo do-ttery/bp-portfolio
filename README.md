@@ -83,3 +83,23 @@ python3 .github/pages_build.py --build
 결과는 `public/`에 생기며 `빌드 완료. 프로젝트 주소 경로 보정: N 개 파일`이 출력되면 성공입니다. `public/`과 `site/public/`은 `.gitignore`로 제외되어 커밋되지 않습니다.
 
 > 주의: 빌드 스크립트는 Hugo 캐시를 정리(`--gc`)하므로, 미리보기 서버가 켜진 상태에서 실행하면 미리보기가 오류(500)를 낼 수 있습니다. 그때는 미리보기를 `Ctrl + C`로 끄고 다시 실행하면 됩니다.
+
+## 내용을 고치려면
+
+모든 파일은 `site/` 안에 있습니다. 링크·이미지 경로는 `about/`, `images/x.jpg`처럼 **`/`로 시작하지 않는 상대 경로**로 씁니다 (공개 주소가 `/bp-portfolio/` 하위 경로이기 때문).
+
+| 바꾸고 싶은 것 | 파일 | 위치 |
+|---|---|---|
+| 사이트 제목(왼쪽 위·브라우저 탭) | `site/hugo.toml` | `title` |
+| 홈 이름·푸터 이름 | `site/hugo.toml` | `[params]`의 `author` |
+| 홈 이름 아래 한 줄 소개 | `site/hugo.toml` | `[params]`의 `info` (줄마다 문자열 하나) |
+| 검색·링크 공유용 설명 | `site/hugo.toml` | `[params]`의 `description`, `keywords` |
+| 푸터 시작 연도 | `site/hugo.toml` | `[params]`의 `since` |
+| 홈 프로필 사진 | `site/static/images/`에 사진 추가 → `site/hugo.toml` | `[params]`의 `avatarURL` 주석 해제 |
+| 홈 GitHub 아이콘 링크 | `site/hugo.toml` | `[[params.social]]`의 `url` |
+| 상단 메뉴 이름·순서·주소 | `site/hugo.toml` | `[[languages.ko.menu.main]]`의 `name`·`weight`·`url` |
+| 소개 페이지 본문 | `site/content/about.md` | `+++` 아래 Markdown |
+| 활동 페이지 본문 | `site/content/projects.md` | `+++` 아래 Markdown |
+| 새 페이지 추가 | `site/content/새이름.md` 만들기 + 메뉴에 `url = "새이름/"` 추가 | |
+| 접근성 보완 CSS | `site/assets/css/a11y.css` | `[params]`의 `customCSS`로 연결됨 |
+| 테마 화면 일부(아이콘 링크·메뉴·다크모드 버튼) | `site/layouts/_partials/` | 같은 경로의 테마 파일을 덮어씀. 테마 원본 `site/themes/template/`은 직접 고치지 않음 |
