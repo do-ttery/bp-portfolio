@@ -42,6 +42,5 @@ slug = "projects"
 
 - 소스 코드: [github.com/do-ttery/AIAgentChallenge](https://github.com/do-ttery/AIAgentChallenge)
 - 시연 영상 (4분 34초): [youtu.be/bliuKhtgmkI](https://youtu.be/bliuKhtgmkI)
-- 배포 서비스: [aiagentchallenge.onrender.com](https://aiagentchallenge.onrender.com/) — 사장님 화면 체험용 패스코드 `1234`
 
-센서 전력값만으로 세탁 시작부터 방치까지 상태가 바뀌고, 방치되면 알림이 나가는 흐름을 시뮬레이터와 실제 매장에서 확인했습니다.
+센서 전력값만으로 세탁 시작부터 방치까지 상태가 바뀌고, 방치되면 알림이 나가는 흐름을 시뮬레이터와 실제 매장에서 확인했습니다. 실제 동작 화면은 시연 영상에서 볼 수 있습니다.
