@@ -103,3 +103,23 @@ python3 .github/pages_build.py --build
 | 새 페이지 추가 | `site/content/새이름.md` 만들기 + 메뉴에 `url = "새이름/"` 추가 | |
 | 접근성 보완 CSS | `site/assets/css/a11y.css` | `[params]`의 `customCSS`로 연결됨 |
 | 테마 화면 일부(아이콘 링크·메뉴·다크모드 버튼) | `site/layouts/_partials/` | 같은 경로의 테마 파일을 덮어씀. 테마 원본 `site/themes/template/`은 직접 고치지 않음 |
+
+## 수정 후 배포와 확인
+
+`main` 브랜치에 push하면 GitHub Actions 워크플로 **Deploy Hugo to GitHub Pages**(`.github/workflows/hugo-pages.yml`)가 자동으로 빌드·배포합니다. 별도로 배포 명령을 실행할 필요는 없습니다.
+
+1. **커밋·push** (저장소 맨 위에서, 바꾼 파일만 지정)
+
+   ```bash
+   git add site/content/about.md
+   git commit -m "content: 소개 페이지에 ○○ 추가"
+   git push
+   ```
+
+2. **Actions 확인** — [Actions 탭](https://github.com/do-ttery/bp-portfolio/actions)에서 방금 커밋 메시지로 된 실행을 엽니다.
+   `build` → `deploy` 두 작업이 모두 초록색 체크(✓)면 성공입니다. 최근 10회 기준 40초~2분 걸렸습니다.
+   빨간색(✗)이면 `build` 작업의 로그에서 오류 줄을 확인하고, 로컬에서 `python3 .github/pages_build.py --build`로 같은 오류가 나는지 봅니다.
+
+3. **공개 화면 확인** — https://do-ttery.github.io/bp-portfolio/ 를 열고 **강력 새로고침**(macOS `Cmd + Shift + R`, Windows `Ctrl + Shift + R`)합니다.
+   GitHub Pages는 브라우저에 최대 10분까지 이전 화면을 남길 수 있어, 일반 새로고침으로는 바뀐 내용이 안 보일 수 있습니다.
+   바꾼 페이지를 주소창에 직접 입력해 열어 보고(예: `/bp-portfolio/about/`), 이미지·링크가 깨지지 않았는지 확인합니다.
