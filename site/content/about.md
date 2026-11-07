@@ -16,3 +16,9 @@ slug = "about"
 | Python | 스마트플러그 전력값을 주기적으로 읽어 서버로 보내는 스크립트 |
 | React Native (Expo) | JBSW-NOW 앱 — 검색 화면, 알림 화면, 알림 설정 화면 |
 | Git · GitHub | 팀 협업(브랜치·Pull Request), 이 사이트의 GitHub Actions 자동 배포 |
+
+## 경력
+
+- **2026** 네이버 커넥트재단 AI Agent Challenge **우수 사례** 선정·캠페인 인터뷰 — [빨래집사](../projects/) (2인 팀, 서버 담당)
+- **2025.12** 컴퓨터인공지능학부 작품경진대회 **대상** — [JBSW-NOW](https://github.com/M-SE0K/JBSW-NOW) (3인 팀, UI/UX·프론트엔드 담당)
+- **2025** 오픈소스 SW 아이디어 해커톤 캠프 **장려상** — JBSW-NOW
