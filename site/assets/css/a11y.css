@@ -16,3 +16,13 @@
     margin: 0;
   }
 }
+
+/* 768px 이하 고정 버튼 가림 방지 (P38):
+   오른쪽 아래에 고정된 다크모드 버튼(.float-container, bottom 2rem·높이 3rem)이
+   좁은 화면에서는 한 줄을 꽉 채운 푸터 글자("Powered by Hugo & Coder.")와 겹쳤다.
+   → 푸터 아래에 버튼 높이만큼 여백을 두어, 맨 아래로 스크롤해도 글자가 버튼 위쪽에 오게 한다. */
+@media only screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 5rem;
+  }
+}
