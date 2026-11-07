@@ -1,0 +1,18 @@
+/* 접근성 보완 CSS (hugo.toml의 params.customCSS로 연결)
+
+   768px 이하 모바일 메뉴:
+   테마는 메뉴를 여닫는 체크박스(#menu-toggle)를 visibility: hidden으로 숨겨서
+   키보드(Tab)로 초점을 줄 수 없고, 마우스·터치 없이는 메뉴를 열 수 없었다.
+   → 화면에서는 계속 안 보이게(opacity 0, 1px) 하되 초점은 받을 수 있게 바꾼다.
+   초점이 오면 테마의 "#menu-toggle:focus-visible + label" 규칙이 ☰ 버튼에 테두리를 그리고,
+   Space 키로 체크박스가 켜지면 테마의 ":checked + label + ul" 규칙으로 메뉴가 펼쳐진다. */
+@media only screen and (max-width: 768px) {
+  .navigation #menu-toggle {
+    visibility: visible;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+  }
+}
