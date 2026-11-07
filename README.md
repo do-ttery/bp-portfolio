@@ -123,3 +123,17 @@ python3 .github/pages_build.py --build
 3. **공개 화면 확인** — https://do-ttery.github.io/bp-portfolio/ 를 열고 **강력 새로고침**(macOS `Cmd + Shift + R`, Windows `Ctrl + Shift + R`)합니다.
    GitHub Pages는 브라우저에 최대 10분까지 이전 화면을 남길 수 있어, 일반 새로고침으로는 바뀐 내용이 안 보일 수 있습니다.
    바꾼 페이지를 주소창에 직접 입력해 열어 보고(예: `/bp-portfolio/about/`), 이미지·링크가 깨지지 않았는지 확인합니다.
+
+## 출처와 라이선스
+
+| 자료 | 출처 | 라이선스 | 이 저장소의 위치 |
+|---|---|---|---|
+| Hugo 테마 **hugo-coder** | [luizdepra/hugo-coder](https://github.com/luizdepra/hugo-coder) — Luiz F. A. de Prá. `main` 브랜치 ZIP을 2026-11-05에 내려받음 | MIT | `LICENSE.md`(맨 위), `site/themes/template/LICENSE.md` (둘이 같은 파일) |
+| 아이콘 폰트 **Font Awesome Free** | [fontawesome.com](https://fontawesome.com) — 테마에 포함 | 아이콘 CC BY 4.0, 폰트 SIL OFL 1.1, 코드 MIT | `site/themes/template/static/fonts/LICENSE.txt` |
+| 파비콘 4종 | hugo-coder 테마 예시 사이트(`exampleSite/static/images/`)의 파일을 그대로 사용 | MIT (테마와 동일) | `site/static/images/` |
+| 정적 사이트 생성기 **Hugo** | [gohugo.io](https://gohugo.io) | Apache 2.0 | 저장소에 포함하지 않음 (빌드 시 설치) |
+| 배포 준비 스크립트 | 수업에서 제공한 `prepare_github_pages.py` (생성기 버전 3.1). `site/`, 워크플로, `.github/pages_build.py`를 만듦 | 수업 자료 | `prepare_github_pages.py`, `.github/` |
+
+- 사이트 푸터의 **"Powered by Hugo & Coder"** 표기는 테마 저작자 고지이므로 지우지 않고 유지합니다.
+- 테마 원본 파일(`site/themes/template/`)은 고치지 않았고, 바꾼 부분은 `site/layouts/_partials/`에 같은 이름으로 덮어써 원본과 구분했습니다.
+- 활동 페이지에서 링크한 [빨래집사](https://github.com/do-ttery/AIAgentChallenge)와 [JBSW-NOW](https://github.com/M-SE0K/JBSW-NOW)는 각 팀 저장소이며, 이 저장소에는 링크만 있습니다.
