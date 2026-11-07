@@ -37,3 +37,23 @@ bp-portfolio/
 ├── LICENSE.md                    # hugo-coder 테마 MIT 라이선스
 └── (archetypes/ assets/ layouts/ exampleSite/ … )  # 테마 ZIP 원본 — 빌드에 미사용
 ```
+
+## 필요한 도구와 설치
+
+| 도구 | 배포(GitHub Actions)에서 쓰는 버전 | 로컬 확인 환경 (macOS) | 용도 |
+|---|---|---|---|
+| Hugo **extended** | 0.167.0 | 0.169.0 (Homebrew) | 사이트 빌드·미리보기. 테마가 SCSS를 쓰므로 extended 판이 필요 |
+| Python | 3.12 | 3.14.5 | 빌드 스크립트 `.github/pages_build.py` 실행 |
+| Git | — | 2.54.0 | 저장소 받기·커밋·push |
+| Dart Sass | 1.105.0 | 설치 안 함 | 배포 환경에서만 설치. 로컬은 Hugo extended만으로 빌드됨 |
+
+배포 환경 버전은 `.github/workflows/hugo-pages.yml`(`HUGO_VERSION`)과 `.github-pages.json`(`version`)에 고정되어 있습니다.
+로컬 Hugo(0.169.0)는 배포용(0.167.0)보다 새 버전입니다. 로컬 빌드 결과를 공개 사이트와 비교했을 때 홈의 `<meta name=generator>`(Hugo 버전 표시) 한 줄 외에는 같았습니다 (2026-11-07 확인).
+
+**macOS 설치** ([Homebrew](https://brew.sh/) 필요)
+
+```bash
+brew install hugo git     # Homebrew의 hugo는 extended 판
+hugo version              # 출력에 "+extended"가 있는지 확인
+python3 --version         # macOS에 기본 설치된 Python 3 사용
+```
