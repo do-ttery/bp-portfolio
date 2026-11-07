@@ -1,0 +1,73 @@
+/* 사이트 꾸밈 CSS (hugo.toml의 params.customCSS로 연결)
+
+   ▸ 홈 바로가기 링크(소개 보기 · 활동 보기) 모양 — site/layouts/_partials/home.html에서 사용
+   테마 색(밝은 배경 #fafafa, 보조 배경 #e0e0e0, 링크 #1565c0 / 어두운 모드 #424242, #42a5f5)에 맞춘 둥근 알약 모양 */
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+}
+
+.home-links .home-link {
+  display: inline-block;
+  min-height: 4.4rem;           /* 터치하기 쉬운 높이 (약 44px) */
+  padding: 1rem 2.4rem;
+  border-radius: 999px;
+  background-color: #e0e0e0;
+  color: #212121;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.home-links .home-link:hover,
+.home-links .home-link:focus {
+  background-color: #1565c0;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.home-links .home-link:focus-visible {
+  outline: 3px solid #1565c0;
+  outline-offset: 3px;
+}
+
+/* 어두운 모드 (토글로 켠 경우 + 자동 모드에서 시스템이 어두운 경우) */
+body.colorscheme-dark .home-links .home-link {
+  background-color: #424242;
+  color: #dadada;
+}
+body.colorscheme-dark .home-links .home-link:hover,
+body.colorscheme-dark .home-links .home-link:focus {
+  background-color: #42a5f5;
+  color: #212121;
+}
+body.colorscheme-dark .home-links .home-link:focus-visible {
+  outline-color: #42a5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .home-links .home-link {
+    background-color: #424242;
+    color: #dadada;
+  }
+  body.colorscheme-auto .home-links .home-link:hover,
+  body.colorscheme-auto .home-links .home-link:focus {
+    background-color: #42a5f5;
+    color: #212121;
+  }
+  body.colorscheme-auto .home-links .home-link:focus-visible {
+    outline-color: #42a5f5;
+  }
+}
+
+/* 상단 왼쪽 사이트 제목(문도경): 테마 기본 1.7rem은 메뉴와 크기가 같아 허전해 보여 조금 키우고 굵게 */
+.navigation .navigation-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+}
