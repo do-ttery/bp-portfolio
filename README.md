@@ -57,3 +57,29 @@ brew install hugo git     # Homebrew의 hugo는 extended 판
 hugo version              # 출력에 "+extended"가 있는지 확인
 python3 --version         # macOS에 기본 설치된 Python 3 사용
 ```
+
+## 로컬에서 확인하기
+
+```bash
+git clone https://github.com/do-ttery/bp-portfolio.git
+cd bp-portfolio
+```
+
+**미리보기** — 파일을 저장하면 브라우저에 바로 반영됩니다. 종료는 `Ctrl + C`.
+
+```bash
+cd site
+hugo server --config hugo.toml,pages.json -b http://localhost:1313/bp-portfolio/ --appendPort=false
+```
+
+브라우저에서 http://localhost:1313/bp-portfolio/ 를 엽니다. 공개 사이트와 같은 하위 경로(`/bp-portfolio/`)로 띄워 경로 문제를 미리 볼 수 있습니다.
+
+**배포와 같은 방식으로 빌드** — GitHub Actions가 실행하는 스크립트를 그대로 실행합니다 (저장소 맨 위에서).
+
+```bash
+python3 .github/pages_build.py --build
+```
+
+결과는 `public/`에 생기며 `빌드 완료. 프로젝트 주소 경로 보정: N 개 파일`이 출력되면 성공입니다. `public/`과 `site/public/`은 `.gitignore`로 제외되어 커밋되지 않습니다.
+
+> 주의: 빌드 스크립트는 Hugo 캐시를 정리(`--gc`)하므로, 미리보기 서버가 켜진 상태에서 실행하면 미리보기가 오류(500)를 낼 수 있습니다. 그때는 미리보기를 `Ctrl + C`로 끄고 다시 실행하면 됩니다.
