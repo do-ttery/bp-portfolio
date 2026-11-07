@@ -12,3 +12,28 @@ Hugo 테마 [hugo-coder](https://github.com/luizdepra/hugo-coder)로 만들고, 
 사이트 구성: 홈(이름·소개) · [소개](https://do-ttery.github.io/bp-portfolio/about/)(관심 분야·사용 기술·경력) · [활동](https://do-ttery.github.io/bp-portfolio/projects/)(대표 활동 빨래집사)
 
 > 테마 원본 README는 `site/themes/template/README.md`에 그대로 남아 있습니다.
+
+## 폴더 구조
+
+실제로 빌드되는 사이트는 **`site/` 폴더 하나**입니다. 저장소 맨 위의 `archetypes/`, `assets/`, `layouts/`, `exampleSite/` 등은 내려받은 테마 ZIP 원본이며 빌드에 쓰이지 않습니다.
+
+```text
+bp-portfolio/
+├── site/                         # ← 실제 사이트 (빌드 대상)
+│   ├── hugo.toml                 #   사이트 설정: 제목·소개 문구·메뉴·GitHub 링크
+│   ├── pages.json                #   배포 주소(baseURL) 등 Pages용 설정 (수업 스크립트 생성)
+│   ├── content/
+│   │   ├── about.md              #   소개 페이지
+│   │   └── projects.md           #   활동 페이지
+│   ├── layouts/_partials/        #   테마 일부를 덮어쓴 파일 (아이콘 링크·메뉴·다크모드 버튼 접근성 수정)
+│   ├── assets/css/a11y.css       #   접근성 보완 CSS (모바일 메뉴 키보드 조작)
+│   ├── static/images/            #   파비콘
+│   └── themes/template/          #   hugo-coder 테마 복사본 (빌드에 사용)
+├── .github/
+│   ├── workflows/hugo-pages.yml  # main에 push하면 빌드·배포하는 GitHub Actions 워크플로
+│   └── pages_build.py            # 워크플로가 실행하는 빌드 스크립트 (하위 경로 보정 포함)
+├── .github-pages.json            # 빌드 설정 기록 (Hugo 버전·설정 파일·배포 주소)
+├── prepare_github_pages.py       # 처음 한 번 site/·워크플로를 만든 수업 제공 스크립트
+├── LICENSE.md                    # hugo-coder 테마 MIT 라이선스
+└── (archetypes/ assets/ layouts/ exampleSite/ … )  # 테마 ZIP 원본 — 빌드에 미사용
+```
