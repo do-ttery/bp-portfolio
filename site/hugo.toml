@@ -29,7 +29,7 @@ keywords = "blog,developer,personal"
 info = ["Full Stack DevOps", "Magician"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
-dateFormat = "January 2, 2006"
+dateFormat = "2006년 1월 2일"
 since = 2019
 # Git Commit in Footer, uncomment the line below to enable it
 # (사용 안 함: 빌드에서 enableGitInfo=false라 표시되지 않고, 값이 테마 원작자 저장소를 가리키고 있었음)
