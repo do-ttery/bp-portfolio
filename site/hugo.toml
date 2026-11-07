@@ -4,6 +4,8 @@ title = "johndoe"
 languageCode = "ko"
 defaultContentLanguage = "ko"
 enableEmoji = true
+# 블로그 글이 없어 tags·categories·authors 분류 목록이 빈 페이지로만 생성되므로 끔
+disableKinds = ["taxonomy", "term"]
 
 [pagination]
 pagerSize = 6
@@ -139,12 +141,6 @@ customRemoteJS = []
 # prefetchsrc = ["'self'"]
 # # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
 # connectsrc = ["'self'", "https://www.google-analytics.com"]
-
-[taxonomies]
-category = "categories"
-series = "series"
-tag = "tags"
-author = "authors"
 
 [[params.social]]
 name = "GitHub"
