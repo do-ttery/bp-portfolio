@@ -23,7 +23,7 @@ author = "문도경"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "전북대학교 컴퓨터공학부 문도경의 개인 소개 사이트"
 keywords = "문도경,전북대학교,컴퓨터공학,백엔드,포트폴리오"
-info = ["Full Stack DevOps", "Magician"]
+info = ["전북대학교 컴퓨터공학부", "작품경진대회 대상 · 네이버 커넥트재단 AI Agent Challenge 우수 사례"]
 avatarURL = "images/avatar.jpg"
 dateFormat = "2006년 1월 2일"
 since = 2026
