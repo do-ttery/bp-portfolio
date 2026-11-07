@@ -1,6 +1,13 @@
 +++
-title = "Projects"
+title = "활동"
+description = "대표 활동: 무인빨래방 AI 운영 에이전트 빨래집사"
 slug = "projects"
 +++
 
-Nothing to see here... Move along!
+## 빨래집사 — 무인빨래방 AI 운영 에이전트
+
+2026 AI Agent Challenge (네이버 커넥트재단) · 팀 도원결의(2인) · 데모데이 @ NAVER 1784
+
+### 기간과 상태
+
+2026년 7월 ~ 8월 · **완료** — 우수 사례로 선정되어 네이버 커넥트재단 캠페인 인터뷰에 참여했습니다 (2026.08.14).
