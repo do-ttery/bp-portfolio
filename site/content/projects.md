@@ -37,3 +37,11 @@ slug = "projects"
 - **기준값은 짐작하지 않고 실측으로만 정했습니다.** 표준 코스를 1초 간격으로 기록해 탈수 구간과 휴지 구간을 확인했고, 그 값을 근거로 종료 판정에 여유 시간을 두었습니다.
 - **수거 여부는 문 열림 센서로만 판단했습니다.** 손님이 "수거했어요" 버튼을 미리 누르면 잘못 처리되는 문제가 있어 버튼을 없앴습니다.
 - **DB를 SQLite에서 Supabase로 바꿨습니다.** 매장은 한 곳이지만 여러 위치·기기에서 같은 데이터에 접근해야 했기 때문입니다.
+
+### 산출물
+
+- 소스 코드: [github.com/do-ttery/AIAgentChallenge](https://github.com/do-ttery/AIAgentChallenge)
+- 시연 영상 (4분 34초): [youtu.be/bliuKhtgmkI](https://youtu.be/bliuKhtgmkI)
+- 배포 서비스: [aiagentchallenge.onrender.com](https://aiagentchallenge.onrender.com/) — 사장님 화면 체험용 패스코드 `1234`
+
+센서 전력값만으로 세탁 시작부터 방치까지 상태가 바뀌고, 방치되면 알림이 나가는 흐름을 시뮬레이터와 실제 매장에서 확인했습니다.
